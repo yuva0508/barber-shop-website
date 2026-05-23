@@ -397,3 +397,44 @@ footer{
     box-sizing: border-box;
   }
 }
+/* --- Fix for Mobile Navigation Menu --- */
+@media (max-width: 768px) {
+  /* Make the header wrap neatly */
+  header.nav {
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding: 15px !important;
+    text-align: center !important;
+  }
+
+  /* Arrange menu links horizontally with a scroll bar if they overflow */
+  header.nav nav {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    width: 100% !important;
+    justify-content: flex-start !important;
+    gap: 15px !important;
+    padding: 5px 0 !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hide the scrollbar under the menu links for a clean look */
+  header.nav nav::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* Style the menu links to look like clean, tappable tabs */
+  header.nav nav a {
+    font-size: 14px !important;
+    padding: 4px 8px !important;
+  }
+
+  /* Center the "Book Now" button on mobile */
+  header.nav .book-btn {
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box;
+  }
+}
